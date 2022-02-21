@@ -1,0 +1,124 @@
+Determining if the function fseek64 exists failed with the following output:
+Change Dir: /home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ed2d5/fast && /usr/bin/make  -f CMakeFiles/cmTC_ed2d5.dir/build.make CMakeFiles/cmTC_ed2d5.dir/build
+make[1]: Entering directory '/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ed2d5.dir/CheckFunctionExists.c.o
+/usr/local/bin/afl-clang-lto   -fPIC -DCHECK_FUNCTION_EXISTS=fseek64 -o CMakeFiles/cmTC_ed2d5.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.18/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ed2d5
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed2d5.dir/link.txt --verbose=1
+/usr/local/bin/afl-clang-lto -fPIC -DCHECK_FUNCTION_EXISTS=fseek64 -fPIC  -rdynamic CMakeFiles/cmTC_ed2d5.dir/CheckFunctionExists.c.o -o cmTC_ed2d5 
+ld.lld: error: undefined symbol: fseek64
+>>> referenced by CheckFunctionExists.c:17 (/usr/local/share/cmake-3.18/Modules/CheckFunctionExists.c:17)
+>>>               lto.tmp:(main)
+>>> did you mean: lseek64
+>>> defined in: /lib/x86_64-linux-gnu/libc.so.6
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_ed2d5.dir/build.make:105: recipe for target 'cmTC_ed2d5' failed
+make[1]: *** [cmTC_ed2d5] Error 1
+make[1]: Leaving directory '/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_ed2d5/fast' failed
+make: *** [cmTC_ed2d5/fast] Error 2
+
+
+
+Determining if the function _fseeki64 exists failed with the following output:
+Change Dir: /home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_12de6/fast && /usr/bin/make  -f CMakeFiles/cmTC_12de6.dir/build.make CMakeFiles/cmTC_12de6.dir/build
+make[1]: Entering directory '/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_12de6.dir/CheckFunctionExists.c.o
+/usr/local/bin/afl-clang-lto   -fPIC -DCHECK_FUNCTION_EXISTS=_fseeki64 -o CMakeFiles/cmTC_12de6.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.18/Modules/CheckFunctionExists.c
+Linking C executable cmTC_12de6
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12de6.dir/link.txt --verbose=1
+/usr/local/bin/afl-clang-lto -fPIC -DCHECK_FUNCTION_EXISTS=_fseeki64 -fPIC  -rdynamic CMakeFiles/cmTC_12de6.dir/CheckFunctionExists.c.o -o cmTC_12de6 
+ld.lld: error: undefined symbol: _fseeki64
+>>> referenced by CheckFunctionExists.c:17 (/usr/local/share/cmake-3.18/Modules/CheckFunctionExists.c:17)
+>>>               lto.tmp:(main)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_12de6.dir/build.make:105: recipe for target 'cmTC_12de6' failed
+make[1]: *** [cmTC_12de6] Error 1
+make[1]: Leaving directory '/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_12de6/fast' failed
+make: *** [cmTC_12de6/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c2829/fast && /usr/bin/make  -f CMakeFiles/cmTC_c2829.dir/build.make CMakeFiles/cmTC_c2829.dir/build
+make[1]: Entering directory '/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2829.dir/src.c.o
+/usr/local/bin/afl-clang-lto   -fPIC -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_c2829.dir/src.c.o -c /home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c2829
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2829.dir/link.txt --verbose=1
+/usr/local/bin/afl-clang-lto -fPIC -DCMAKE_HAVE_LIBC_PTHREAD -fPIC  -rdynamic CMakeFiles/cmTC_c2829.dir/src.c.o -o cmTC_c2829 
+ld.lld: error: undefined symbol: pthread_create
+>>> referenced by src.c:11
+>>>               lto.tmp:(main)
+
+ld.lld: error: undefined symbol: pthread_detach
+>>> referenced by src.c:12
+>>>               lto.tmp:(main)
+
+ld.lld: error: undefined symbol: pthread_cancel
+>>> referenced by src.c:13
+>>>               lto.tmp:(main)
+
+ld.lld: error: undefined symbol: pthread_join
+>>> referenced by src.c:14
+>>>               lto.tmp:(main)
+
+ld.lld: error: undefined symbol: pthread_atfork
+>>> referenced by src.c:15
+>>>               lto.tmp:(main)
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_c2829.dir/build.make:105: recipe for target 'cmTC_c2829' failed
+make[1]: *** [cmTC_c2829] Error 1
+make[1]: Leaving directory '/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_c2829/fast' failed
+make: *** [cmTC_c2829/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2dc7a/fast && /usr/bin/make  -f CMakeFiles/cmTC_2dc7a.dir/build.make CMakeFiles/cmTC_2dc7a.dir/build
+make[1]: Entering directory '/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2dc7a.dir/CheckFunctionExists.c.o
+/usr/local/bin/afl-clang-lto   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_2dc7a.dir/CheckFunctionExists.c.o -c /usr/local/share/cmake-3.18/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2dc7a
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2dc7a.dir/link.txt --verbose=1
+/usr/local/bin/afl-clang-lto -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -fPIC  -rdynamic CMakeFiles/cmTC_2dc7a.dir/CheckFunctionExists.c.o -o cmTC_2dc7a  -lpthreads 
+ld.lld: error: unable to find library -lpthreads
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_2dc7a.dir/build.make:105: recipe for target 'cmTC_2dc7a' failed
+make[1]: *** [cmTC_2dc7a] Error 1
+make[1]: Leaving directory '/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/build/CMakeFiles/CMakeTmp'
+Makefile:140: recipe for target 'cmTC_2dc7a/fast' failed
+make: *** [cmTC_2dc7a/fast] Error 2
+
+
+

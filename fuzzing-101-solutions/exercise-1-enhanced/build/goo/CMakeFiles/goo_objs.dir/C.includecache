@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/goo/gtypes.h
+
+/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/goo/parseargs.c
+stdio.h
+-
+stddef.h
+-
+string.h
+-
+stdlib.h
+-
+ctype.h
+-
+parseargs.h
+/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/goo/parseargs.h
+
+/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/goo/parseargs.h
+gtypes.h
+/home/mantovan/libafl_tests/fuzzing-101-solutions/exercise-1-enhanced/xpdf/goo/gtypes.h
+

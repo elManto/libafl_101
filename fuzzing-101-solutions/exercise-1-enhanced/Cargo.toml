@@ -1,0 +1,17 @@
+[package]
+name = "exercise-1-enhanced"
+version = "0.1.0"
+edition = "2021"
+# build = "build.rs"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libafl = { path = "../../../Repositories/LibAFL/libafl" }
+libafl_cc = { path = "../../../Repositories/LibAFL/libafl_cc" }
+libafl_targets = { path = "../../../Repositories/LibAFL/libafl_targets" , features = ["libfuzzer", "sancov_pcguard_hitcounts"] }
+
+[lib]
+name = "exerciseone"
+crate-type = ["staticlib"]
