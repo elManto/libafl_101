@@ -9,4 +9,4 @@ edition = "2021"
 clap = "3.0.0-beta.5"
 libafl = { path = "../../../Repositories/LibAFL/libafl" }
 libafl_sugar = { path = "../../../Repositories/LibAFL/libafl_sugar" }
-libafl_targets = { path = "../../../Repositories/LibAFL/libafl_targets", features = "ForkserverBytesCoverageSugar" }
+libafl_targets = { path = "../../../Repositories/LibAFL/libafl_targets"}
